@@ -30,7 +30,24 @@ public class Main{
             System.out.println("Number of Losses: "+games.numbersOfLosses());
 
         }else if(mode==2){
-        //TODO: CPU VS CPU
+            Games games=new Games();
+
+            int cpuOne = 0;
+
+            for(int i = 0; i < 25; i++){
+                cpuOne = (int)(Math.random()*3);
+
+                int result=Game.game(cpuOne);
+                if(result!=-1){
+                    games.addResult(result);
+                    i++;
+                }
+            }
+
+            System.out.println();
+            System.out.println("Number of Draws: "+games.numbersOfDraws());
+            System.out.println("Number of Wins: "+games.numbersOfWins());
+            System.out.println("Number of Losses: "+games.numbersOfLosses());
         }else{
             System.out.println("No valid mode was selected");
         }
