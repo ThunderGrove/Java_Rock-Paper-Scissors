@@ -1,7 +1,6 @@
 public class Game{
     public static int game(int player){
         int cpu=Rps.main();
-
         if(player==0&&cpu==0){
             return 1;
         }else if(player==0&&cpu==1){
@@ -21,7 +20,6 @@ public class Game{
         }else if(player==2&&cpu==2){
             return 9;
         }
-
         return -1;
     }
 }

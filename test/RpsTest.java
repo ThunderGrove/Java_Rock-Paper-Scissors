@@ -5,13 +5,12 @@ class RpsTest{
     @Test
     void testMain(){
         //Test to verify that the random method generate a int within valid range.
-        for (int i=0;i<9999;i++){
+        for(int i=0;i<9999;i++){
             int result = Rps.main();
             assertTrue(3>=result,"The result is to high");
             assertTrue(-1<=result,"The result is to low");
         }
     }
-
     @Test
     void testConvertResult(){
         //Test to make sure that all possible return strings gets returned
